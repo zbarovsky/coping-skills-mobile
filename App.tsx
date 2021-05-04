@@ -10,7 +10,7 @@ export default function App() {
       <View style={{marginTop: 35}}>
         <Text style={styles.title}>Coping Skills Generator</Text>
       </View>
-      <View>
+      <View style={{marginTop: 10}}>
         <GenerateSkill />
       </View>
       <StatusBar style="auto" />

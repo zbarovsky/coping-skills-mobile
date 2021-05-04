@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {StyleSheet, Text, View, Button, Alert} from 'react-native'
 import axios from 'axios'
+import Skill from './Skill'
+import Loading from './Loading'
 
 export default function GetSkill() {
     const [copingSkill, setCopingSkill] = useState<string>('')
@@ -21,9 +23,9 @@ export default function GetSkill() {
     }
 
     return (
-        <View>
+        <View style={{marginTop: 18}}>
             <View>
-                <Text>{copingSkill}</Text>
+                {isLoading ? <Loading /> : <Skill skill={copingSkill}/>}
             </View>
             <View>
                 <Button
